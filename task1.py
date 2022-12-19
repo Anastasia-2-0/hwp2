@@ -4,3 +4,10 @@
 
 # ;  - 6782 -> 23
 # ;  - 0,56 -> 11
+n = input('Введите число: ')
+sum = 0
+for a in n:
+    if a.isdigit():
+        sum += int(a)
+
+print(f'Сумма равна {sum}')
