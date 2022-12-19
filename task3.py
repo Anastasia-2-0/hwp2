@@ -5,7 +5,12 @@
 # ; - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
 n = int(input('n = '))
-list = []
+my_list = []
 for i in range(1, n+1):
-    list.append([i, pow(1 + (1/i),i)])
-print(dict(list))
+    my_list.append([i, round(pow(1 + (1/i),i), 2)])
+print(dict(my_list))
+
+sum = 0
+for i in range(1, n + 1):
+    sum += (1 + 1 / i) ** i
+print(f'Сумма последовательности равна {round(sum,2)}')
